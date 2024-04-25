@@ -1,0 +1,1530 @@
+/**
+ * This is not a CSS tutorial, be gentle... 😇
+ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("/fonts.css");
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #ff4d4d #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #ff4d4d;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+html {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-display: block;
+    overscroll-behavior: contain;
+    font-size: max(0.75rem, 0.8101851852vw);
+    color: #ff4d4d;
+    background: #ecedef;
+}
+
+::selection {
+    background: rgba(110, 107, 205, 0.5);
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding-left: max(1.2rem, 72/1440 * 100vw);
+    padding-right: max(1.2rem, 72/1440 * 100vw);
+}
+
+.headAppContainer {
+    padding-left: max(1.2rem, 72/1440 * 100vw);
+    padding-right: max(1.2rem, 72/1440 * 100vw);
+    display: flex;
+    justify-content: center;
+    /* padding: 150px; */
+}
+
+.home-hero-scroll {
+    z-index: 5;
+    position: absolute;
+    left: 50%;
+    top: 95%;
+    transform: translate(-70%, -50%);
+    text-transform: uppercase;
+
+}
+
+.scrollToExplore {
+    font-size: max(1.75rem, 7/1440 * 10vw);
+    font-weight: 700;
+}
+
+.containerHakimi {
+    position: relative;
+    /* 添加相对定位 */
+    height: 110vh;
+    width: 100%;
+    margin-top: 8em;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+article {
+    padding-top: 15vh;
+}
+
+section {
+    margin: max(5px, 5vw) 0;
+}
+
+header {
+    height: 11vh;
+    max-height: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    margin-bottom: max(0.5rem, 2vw);
+}
+
+.headerLayout {
+    position: relative;
+    padding: 8em 8em 2em 8em;
+    
+}
+
+/* .headerLayout h2 {
+    font-size: max(2.75rem, 39/1440 * 50vw);
+    font-weight: 10;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    margin: 0;
+    margin-right: 11em;
+    margin-left: 2.87em;
+} */
+
+.headerLayout h2 {
+    font-size: max(3.75rem, 52/1440 * 80vw);
+    font-weight: 10;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    margin: 0;
+    margin-right: 1em;
+    margin-bottom: -0.5em; 
+
+}
+
+.WeArchitect{
+    padding: 8em 8em 2em 8em;
+
+}
+
+
+#title2h2{
+    font-size: max(3.75rem, 62/1440 * 80vw);
+}
+
+h2 {
+    font-size: max(3.75rem, 187/1440 * 100vw);
+    font-weight: 500;
+    line-height: 0.8;
+    letter-spacing: -0.03em;
+    margin: 0;
+    margin-left: -0.07em;
+}
+
+
+
+.imagecubetext {
+    font-size: max(3.75rem, 107/1440 * 100vw);
+    font-weight: 500;
+    line-height: 0.8;
+    letter-spacing: -0.03em;
+    margin: 0;
+    margin-left: 2.5em;
+    white-space: nowrap;
+    /* 禁止换行 */
+    margin-top: -0.8em;
+    margin-bottom: 1.2em;
+}
+
+.headapp {
+    position: absolute;
+    z-index: 1;
+    margin: -4em 0 0;
+    /* background-color: black; */
+}
+
+
+.Stream {
+    font-size: max(3.75rem, 77/1440 * 100vw);
+    font-weight: 500;
+    line-height: 0.8;
+    letter-spacing: -0.03em;
+    margin: 0;
+    margin-left: 1.2em;
+    white-space: nowrap;
+    /* 禁止换行 */
+}
+
+.lastText {
+    margin-left: 10em;
+    font-size: max(3.75rem, 50/1440 * 100vw);
+    margin-bottom: 5em;
+}
+
+h2 span {
+    display: inline-block;
+    width: auto;
+}
+
+.subline {
+    font-weight: 400;
+    font-size: max(14px, calc(14 / 1440 * 100vw));
+    display: block;
+    line-height: 1.5;
+    letter-spacing: 0;
+    margin-top: 2.5rem;
+    width: 80%;
+    margin-left: 0;
+}
+
+.title {
+    padding: 8em 8em 2em 8em;
+}
+
+.section3 {
+    padding: 9em 8em 2em 0em;
+    ;
+}
+
+.section3 h2 {
+    font-size: max(3.75rem, 127/1440 * 100vw);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    margin: 0;
+    margin-left: -0.07em;
+}
+
+.title h2 {
+    font-size: max(3.2rem, 77/1440 * 100vw);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    margin: 0;
+    margin-left: -0.07em;
+}
+
+.bodyCopyVideoBall {
+    margin-left: 15em;
+
+}
+
+.bodyCopyVideoBall p {
+    font-size: clamp(1.1rem, 1.5vw, 3rem);
+    height: fit-content;
+    line-height: 1.4;
+    width: 50%;
+}
+
+.watchtext {
+    font-size: clamp(1rem, 1.2vw, 3rem);
+    height: fit-content;
+    line-height: 1.4;
+    width: 120%;
+}
+
+.watchlayout {
+    width: 50%;
+    height: 50%;
+    padding-left: max(1.2rem, 72/1440 * 100vw);
+    padding-right: max(1.2rem, 72/1440 * 100vw);
+
+}
+
+.watchBody{
+    line-height: 1.4;
+    height: fit-content;
+    font-size: clamp(1.3rem, 1.5vw, 1rem);
+    width: 80%;
+    align-items: center;
+    margin-left: 15em;
+    position: absolute;
+    margin-top: -33em;
+}
+
+
+.Placeholder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    aspect-ratio: 16/10;
+}
+
+/* .ScrollScene,
+.ViewportScrollScene {
+    outline: 1px dashed rgba(255, 255, 255, 0.33);
+    position: relative;
+} */
+
+/* .ScrollScene:after,
+.ViewportScrollScene:after {
+    content: 'ScrollScene';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(255, 255, 255, 0.33);
+    color: black;
+    font-size: 10px;
+    padding: 5px;
+} */
+
+.ViewportScrollScene:after {
+    content: 'ViewportScrollScene';
+}
+
+
+.aboutUsBtn {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #ff4d4d;
+    background-color: #ffffff;
+    padding: 10px 35px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.11) 1px 1px 15px 1px;
+    border-radius: 50px;
+    transition: 500ms;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    margin-left: 50%;
+    margin-top: 3%;
+}
+
+.aboutUsBtn:hover {
+    transition: 500ms;
+    padding: 10px 46px;
+    background-color: #ff4d4d;
+    color: #ffffff;
+    border: none;
+}
+
+.videoBallEffect {
+    opacity: 1;
+    touch-action: none;
+    animation: fade-in 2s ease 0s forwards;
+    z-index: 5;
+    display: flex;
+    position: relative;
+    align-items: center;
+    /* height: 500px; */
+    width: 50%;
+    margin-top: -28.5%;
+    top: 50%;
+    border-radius: 30px;
+    /* 将视频球置于容器的上中位置 */
+}
+.videoBallEffect video{
+    width: 100%;
+    border-radius: 30px;
+    /* 将视频球置于容器的上中位置 */
+}
+
+
+
+.blankContainer {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 1302px;
+    /* 修改视频容器的高度为692px */
+    overflow: hidden;
+    background-color: black;
+    border-radius: 30px;
+    margin-top: 22em;
+}
+
+.blackBackground {
+    background-color: black;
+    z-index: -5;
+}
+
+
+.love {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    max-width: 100%;
+    height: 20px;
+    /* 修改视频容器的高度为692px */
+    overflow: hidden;
+    /* background-color: black; */
+    /* border-radius: 20px; */
+    background-color: black;
+    align-items: center;
+    padding-left: max(5.2rem, 640/1440 * 100vw);
+    padding-right: max(5.2rem, 640/1440 * 100vw);
+    color: #555;
+    margin-top: 25em;
+}
+
+
+
+.Marquee {
+    white-space: nowrap;
+    padding: 0vw 0;
+    overflow: hidden;
+}
+
+.Marquee>div {
+    will-change: transform;
+}
+
+.Marquee h1 {
+    margin: 0;
+    line-height: 1;
+    font-size: 30vw;
+}
+
+.marqueeWrapper {
+    overflow: hidden;
+    background: none;
+    color: #100d14;
+    border-radius: 20;
+    margin: -13em 0 0;
+}
+
+.marqueeWrapper2 {
+    overflow: hidden;
+    background: none;
+    color: #100d14;
+    border-radius: 20;
+    margin: -15em 0 0;
+    background: #ff4d4d;
+}
+
+.marqueeWrapper3 {
+    overflow: hidden;
+    background: none;
+    color: #100d14;
+    border-radius: 20;
+    margin: -5em 0 0;
+}
+
+.marqueeBig {
+    background-color: #100d14;
+}
+
+/* https://ryanmulligan.dev/blog/css-marquee/ */
+.marquee {
+    display: flex;
+    user-select: none;
+    gap: var(--gap);
+}
+
+
+.marquee__content {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: var(--gap);
+    /* css marquee */
+    will-change: transform;
+    animation: scroll var(--duration) linear infinite;
+}
+
+.marquee__content2 {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: var(--gap);
+    /* css marquee */
+    will-change: transform;
+    animation: scroll var(--duration) linear infinite;
+    animation-direction: reverse;
+    /* background-color:#ff4d4d; */
+    color: #ffffff;
+    margin: 0.2em 0 0;
+}
+
+.marquee__content2 h2 {
+    font-size: 8.2vw;
+    margin: 0;
+    line-height: 1.5;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.marquee.reverse .marquee__content {
+    animation-direction: reverse;
+    /* background-color:#ff4d4d; */
+    color: #100d14;
+    margin: 8.2em 0 0;
+}
+
+.marquee__content h2 {
+    font-size: 8.2vw;
+    margin: 0;
+    line-height: 1.5;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+
+.heading2 {
+    color: transparent;
+    /* background: linear-gradient(
+      to right,
+      rgb(255, 255, 255) 50%,
+      rgb(37, 37, 37) 50%
+    ); */
+    background-color: #fdcbc0;
+    background-position-x: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(calc(-150% - var(--gap)));
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #100d14;
+    color: white;
+    padding: 20px;
+    padding-top: max(2.5rem, 30vw);
+    border-radius: 30px;
+    padding-left: max(1.2rem, 72/1440 * 100vw);
+    padding-right: max(1.2rem, 72/1440 * 100vw);
+}
+
+.footer-left {
+    flex: 1;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.go-to-top {
+    cursor: pointer;
+    background-color: white;
+    color: #333;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.go-to-top:hover {
+    background-color: #eee;
+}
+
+
+h3 {
+    font-family: "Playfair Display", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1;
+    font-size: max(2rem, 64/1440 * 100vw);
+    margin: 10vw 0;
+}
+
+h3 span {
+    width: 80%;
+}
+
+h3 em {
+    text-align: right;
+    display: block;
+    margin-top: 2.5rem;
+}
+
+h3 em span {
+    margin-left: auto;
+}
+
+
+.worldSpaceClickableButton {
+    position: relative;
+    display: inline-block;
+    padding: 13px 15px;
+    margin: 1px 0;
+    color: black;
+    font-size: smaller;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 1px;
+    overflow: hidden;
+    margin-right: 10px;
+    text-wrap: nowrap;
+    background-color: white;
+    border-radius: 20px;
+    animation: GlowAnimation 1s infinite;
+}
+
+.worldSpaceClickableButton:hover {
+    background: #03e9f4;
+    color: #050801;
+    animation: none;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+#windowButton {
+    width: 20rem;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+.Clik_Me{
+    height: 100px;
+    width: 200px;
+    position: absolute;
+    /* 使用绝对定位 */
+    z-index: 5;
+    left: 12%;
+    bottom: 0;
+    /* 放置在底部 */
+    transform: translateX(-50%);
+    /* 居中水平 */
+    animation: myAnim 4s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+	0%,
+	50%,
+	100% {
+		opacity: 1;
+	}
+
+	25%,
+	75% {
+		opacity: 0;
+	}
+}
+.Clik_Me h2{
+    line-height: 1.4;
+    grid-column: 7 / span 6;
+    height: fit-content;
+    font-size: clamp(1rem, 1.5vw, 3rem);
+    color: #333;
+}
+.drag {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    /* 使用绝对定位 */
+    z-index: 5;
+    left: 50%;
+    bottom: 0;
+    /* 放置在底部 */
+    transform: translateX(-50%);
+    /* 居中水平 */
+}
+
+.dragTop {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    /* 使用绝对定位 */
+    z-index: 5;
+    left: 50%;
+    top: 5em;
+    /* 放置在底部 */
+    transform: translateX(-50%);
+    
+    /* 居中水平 */
+}
+
+.drag.dragTop img {
+    max-width: 100%;
+    max-height: 100%;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+
+
+h4 {
+    font-weight: 400;
+    font-size: max(1rem, 36/1440 * 100vw);
+    line-height: 1.36;
+    margin: max(5rem, 200/1440 * 100vw) 0;
+    width: 77%;
+}
+
+p {
+    margin-top: max(5rem, 5vw);
+}
+
+
+.JellyPlaceholder {
+    aspect-ratio: 16/16;
+    width: 66%;
+    margin: auto;
+}
+
+.ImageLandscape {
+    aspect-ratio: 16/9;
+}
+
+.landingImage {
+    aspect-ratio: 12/9;
+    display: inline;
+    border-radius: 30;
+}
+
+.ImagePortrait {
+    aspect-ratio: 10/16;
+    width: 47.5%;
+}
+
+.ParallaxContainer {
+    display: flex;
+    margin: max(5rem, 300/1440 * 100vw) 0;
+}
+
+.aspect-16_11 {
+    aspect-ratio: 16/11;
+    width: 50%;
+}
+
+.aspect-9_13 {
+    aspect-ratio: 9/13;
+    width: 18%;
+    margin: auto;
+}
+
+img {
+    display: block;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+/* CODROPS TEMPLATE */
+
+a {
+    text-decoration: none;
+    color: var(--color-link);
+    outline: none;
+    cursor: pointer;
+}
+
+a:hover {
+    color: var(--color-link-hover);
+    outline: none;
+}
+
+/* Better focus styles from https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible */
+a:focus {
+    /* Provide a fallback style for browsers
+	 that don't support :focus-visible */
+    outline: none;
+    background: lightgrey;
+}
+
+a:focus:not(:focus-visible) {
+    /* Remove the focus indicator on mouse-focus for browsers
+	 that do support :focus-visible */
+    background: transparent;
+}
+
+a:focus-visible {
+    /* Draw a very noticeable focus style for
+	 keyboard-focus on browsers that do support
+	 :focus-visible */
+    outline: 2px solid #6e6bcd;
+    background: transparent;
+}
+
+.frame {
+    width: 100%;
+    min-height: 10vh;
+    padding-bottom: 1.5rem;
+}
+
+.frame>* {
+    margin: 1rem 0;
+}
+
+.frame.container {
+    margin-top: 1em;
+    position: fixed;
+    z-index: 100;
+}
+
+.frame a,
+.frame button {
+    pointer-events: auto;
+}
+
+.frame a:not(.frame__title-back) {
+    white-space: nowrap;
+    /* overflow: hidden; */
+    position: relative;
+    display: inline;
+}
+
+
+.frame__title {
+    grid-area: title;
+    display: flex;
+}
+
+.frame__title-main {
+    font-size: inherit;
+    margin: 2.3em 1em 0;
+    font-weight: inherit;
+}
+
+.frame__title-back {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+
+.frame__title-back svg {
+    fill: currentColor;
+}
+
+.frame__title-logo {
+    width: 6%;
+    height:6%;
+    border-radius: 5px;
+    margin-top: 1em;
+}
+ .topnav {
+	grid-area: prev;
+
+  }
+  
+  .topnav a
+  {
+	padding: 0px 6px;
+	float: left;
+  } 
+
+  .dropdown {
+	position: relative;
+	margin-top: 2em;
+    /* margin-right: 6.5em; */
+  }
+  
+  .dropbtn {
+	position: relative;
+	border-radius: 48px;
+	font-size: 20px;
+	color: var(--color-link);;
+	background-color: #ff4d4d;
+	color: #ededed;
+	z-index: 1;
+	padding: 10px 30px 10px 30px;
+	text-decoration: none;
+	border: transparent;
+	font-size: 15px;
+	transition: 0.3s;
+
+  }
+  .dropbtn:hover {
+	text-decoration: none;
+	background: #cfcfcf;
+	color: #ff4d4d;
+  }
+  .menu{
+	position:fixed;
+	z-index: 5;
+	/* margin-right: 45px; */
+    padding-left: max(1.2rem, 35/1440 * 100vw);
+    padding-right: max(1.2rem,35/1440 * 100vw);
+  }
+  .menu > li {
+	margin: 2px;
+	border-radius: 48px;
+	transition: 0.3s;
+	background-color: white;
+	list-style: none;
+	width: 120px;
+	
+  }
+  
+  .menu > li:hover {
+	background-color: lightgray;
+  }
+  
+  .menu > li > button {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+  
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 5px;
+	margin: 0;
+	font: inherit;
+	cursor: pointer;
+  } */
+
+.imgWrapper {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    min-height: 100px;
+    overflow: hidden;
+    z-index: -5;
+}
+
+
+
+#VideoClose {
+    position: absolute;
+    /* Ensures close button stays within the panel */
+    top: 5px;
+    /* Adjust for desired gap from top */
+    right: 100px;
+    /* Adjust for desired gap from right */
+    background: white;
+    /* Remove default button background */
+    border: none;
+    /* Remove default button border */
+    font-size: 2rem;
+    /* Adjust font size for close button */
+    cursor: pointer;
+    /* Indicate clickable behavior */
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+}
+
+.VideoHolder {
+    position: fixed;
+    left: 0.1vw;
+    top: 5vh;
+
+    background-color: none;
+    border-radius: 2vh;
+    display: flex;
+    flex-direction: column;
+    /* Added overflow: hidden to prevent potential iframe overflow */
+    overflow: hidden;
+    /* padding: 2% 40%; */
+    z-index: 3000000000;
+}
+
+#ytVideo {
+    width: 100%;
+    /* Ensures iframe fills the remaining space */
+    height: 900px;
+    /* Ensures iframe fills the remaining space */
+    /* Adjust for desired gap (margin alternative below) */
+    /* padding: 20px 10%; */
+}
+
+
+
+.lastBody{
+    line-height: 1.4;
+    grid-column: 1 / span 6;
+    height: fit-content;
+    font-size: clamp(1rem, 1.5vw, 1rem);
+    width: 50%;
+}
+
+
+.custom-loader {
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:conic-gradient(#0000 10%,#766DF4);
+    -webkit-mask:radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+    animation:s3 1s infinite linear;
+  }
+
+
+
+  .parent {
+    width: '100%';
+    /* background-color: black; */
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 80px 0px;
+}
+
+.font-10{
+    margin-left:3.5em;
+   margin-top: -4em;
+}
+
+#target{
+    white-space: nowrap; /* Prevent wrapping */
+    font-size: max(2.75rem, 80/1440 * 100vw);
+}
+
+.child {
+    width: '80%';
+    padding: 0 40px;
+}
+
+
+.font-4{
+    font-family: "Playfair Display", sans-serif;
+	font-weight: 400;
+	font-style: italic;
+}
+
+.font-10 {
+    font-family: "Playfair Display", sans-serif;
+	font-weight: 400;
+	font-style: italic;
+}
+
+.font-21 {
+	font-family: "gigantic", sans-serif;
+	font-weight: 900;
+	font-style: normal;
+}
+.content__title {
+	font-size: 12vw;
+	line-height: 0.8;
+	counter-increment: section;
+	text-align: center;
+	display: grid;
+	gap: 2rem;
+}
+.windowButton1{
+    display: none;
+}   
+
+
+.customButton {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px 20px;
+    width: 30vh;
+    text-align: center;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.customButton:hover {
+    background-color: white;
+    color: #ff4d4d;
+    transition: 0.3s;
+}
+
+.linkButton {
+    position: fixed;
+    bottom: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    z-index: 999; /* Ensure it's above other content */
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.linkButton:hover {
+    background-color: #f0f0f0;
+}
+
+.sunSpotDiv{
+    width: 100vh;
+    height: 100vh;
+    position:fixed;
+    background-color: #000;
+}
+
+.text-container {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    right: 38.5vw; /* Use percentage value instead of pixels */
+    top: 0%;
+    transform: translateY(-50%);
+    /* width: 100%; */
+    padding: 20px;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    border-radius: 10px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+    margin-right: 66650px;
+  }
+  
+  .text-container p {
+    margin: 0;
+    line-height: 1.5;
+    color: gray;
+    white-space: nowrap;
+    font-size: 20px; /* Reduce font size for better readability */
+  }
+
+  #aBrief{
+    color:#cfcfcf;
+  }
+  
+
+
+  @keyframes s3 {to{transform: rotate(1turn)}}
+
+
+@media screen and (min-width: 35em) {
+    h3 em {
+        margin-top: 0;
+    }
+}
+
+
+
+@media (min-width: 400px) {
+    p {
+        margin-left: 50%;
+        width: max(200px, 22vw);
+    }
+
+}
+
+/* 对于小屏幕（手机等），设置基本样式 */
+@media screen and (max-width: 27em) {
+
+    .text-container {
+        display: none;
+    }
+    /* 这里是针对小屏幕的 CSS 样式 */
+    .frame {
+        width: 85%;
+        height: 5vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1.5rem;
+        width: 100%;
+        /* 将此行调整至 display: flex; 下 */
+    }
+
+    .frame__title-logo{
+        width: 42%;
+    height: 42%;
+    border-radius: 5px;
+    margin-top: 1em;
+    }
+    .headerLayout {
+        margin-top: 11em;
+        margin-bottom: 11em;
+       padding: 0;
+        
+    }
+
+    .dropbtn {
+        justify-content:end;
+    }
+    .menu{
+        justify-content: space-between;
+        right: 0.5%;
+        /* justify-content:end; */
+    }
+
+
+    header{
+        display: block;
+        height: 8vh;
+    }
+
+    #headerh2 {
+        font-size: max(2.3rem, 37 / 1440* 100vw);
+        font-weight: 500;
+        width: 100%;
+        line-height: 1.0;
+        letter-spacing: -0.03em;
+        margin-top: -4.6em;
+        margin-left: 0em;
+        position: relative;
+    }
+
+    .headAppContainer {
+        padding-left: 20;
+        padding-right: 20;
+        justify-content: center;
+        /* padding: 50px; */
+        margin-top: 7em;
+    }
+    .containerHakimi {
+        height: 80vh;
+        margin-top: 5em;
+        padding-left: max(1.2rem, 72/1440 * 100vw);
+        padding-right: max(1.2rem, 72/1440 * 100vw);
+        padding-bottom: max(1.2rem, 72/1440 * 100vw);
+    }
+
+    .home-hero-scroll{
+        width: 100%;
+        /* position: fixed; */
+        margin-top: 3em;
+        margin-left: 16em;
+        display: none;
+    }
+
+    .home-hero-scroll p{
+        font-size: 15px;
+    }
+
+
+    .title{
+        padding: 5em 2em 2em 0em;
+    }
+     
+    .bodyCopyVideoBall{
+        display: none;
+    }
+
+    .videoBallEffect{
+        height: 350px;
+        width: 100%;
+        margin-top: -18.5%;
+        top: 20%;
+        border-radius: 30px
+        }
+
+    .section3{
+        padding: 0em 2em 2em 0em;
+        margin-top: -2em;
+    }
+    
+
+    .watchBody{
+        display: none;
+    }
+    .watchlayout{
+        padding: 8em 2em 12em 2em;
+        width: 10%;
+    }
+    .parent{
+       margin-top: -5em;
+       padding: 4px 80px 40px;
+    }
+    
+    #target2{
+        margin-top: 0em;
+        font-size: 20px;
+        width: 100vw;
+        margin-right: 3.5em;
+     }
+    
+     .dragTop,.drag {
+        height: 100px;
+        width: 100px;
+    }
+    /* .containerHakimi{
+        padding-left: max(1.2rem, 72/1440 * 100vw);
+        padding-right: max(1.2rem, 72/1440 * 100vw);
+        border-radius: 30;
+    } */
+
+
+}
+
+/* 对于小屏幕（手机等），设置基本样式 */
+@media screen and (min-width: 27.0625em) and (max-width: 48em) {
+
+    .text-container {
+        display: none;
+    }
+
+    .dragTop,.drag {
+        height: 100px;
+        width: 100px;
+    }
+   /* 这里是针对小屏幕的 CSS 样式 */
+   .frame {
+    width: 85%;
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5rem;
+    width: 100%;
+    /* 将此行调整至 display: flex; 下 */
+}
+
+    .frame__title-logo{
+        width: 22%;
+    height: 22%;
+    border-radius: 5px;
+    margin-top: 1em;
+    }
+    .headerLayout {
+        margin-top: 11em;
+        padding: 0;
+    }
+
+    .dropbtn {
+        justify-content:end;
+    }
+    .menu{
+        justify-content: space-between;
+        right: 0.5%;
+        /* justify-content:end; */
+    }
+
+
+    .home-hero-scroll{
+      display: none;
+    }
+    .headAppContainer {
+        padding-left: 0;
+        padding-right: 0;
+        justify-content: center;
+        margin-top: -10em;
+
+    }
+
+
+}
+
+/* 对于中等屏幕（平板等），设置适当的样式 */
+@media screen and (min-width: 48.0625em) and (max-width: 64em) {
+  .text-container {
+        display: none;
+    }
+    .frame {
+        width: 100%;
+        height: 5vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1.5rem;
+        /* 将此行调整至 display: flex; 下 */
+    }
+
+    .frame__title-logo{
+        width: 22%;
+    height: 22%;
+    border-radius: 5px;
+    margin-top: 1em;
+    }
+
+    .headerLayout h2 {
+        font-size: max(2.75rem, 39/1440 * 50vw);
+        font-weight: 10;
+        line-height: 1.2;
+        letter-spacing: -0.03em;
+        margin: 0;
+       
+        margin-bottom: 2em;
+    } 
+    .headerLayout {
+        padding: 0 2em 0 2em;
+    }
+
+    .headAppContainer {
+        padding-left: max(1.2rem, 72/1440 * 100vw);
+        padding-right: max(1.2rem, 72/1440 * 100vw);
+        justify-content: center;
+        padding: 50px;
+        margin-top: -10em;
+     
+    }
+
+    .menu{
+        right: 20px;
+    }
+    .home-hero-scroll p{
+        width: 100%;
+        transform: translate(-40%, -250%);
+        font-size: max(1.75rem, 7/1440 * 10vw);
+        font-weight: 700;
+        white-space: nowrap; /* Prevent text from wrapping onto multiple lines */
+        overflow-x: hidden; /* Hide horizontal overflow */
+    }
+
+    .title{
+        padding: 3em 2em 2em 2em;
+    }
+    .videoBallEffect{
+      
+        align-items: center;
+        height: 400px;
+        width: 100%;
+        margin-top: 1.5%;
+        border-radius: 30px;
+        padding-left: max(1.2rem, 72/1440 * 100vw);
+        padding-right: max(1.2rem, 72/1440 * 100vw);
+       
+        
+    }
+    .dragTop,.drag {
+        height: 100px;
+        width: 100px;
+    }
+    .bodyCopyVideoBall{
+        display: none;
+    }
+
+    .aboutUsBtn{
+        display: none;
+    }
+
+    .section3{
+        padding: 9em 2em 2em 2em;
+    }
+    .watchBody p{
+        display: none;
+    }
+}
+
+/* 对于大屏幕（桌面电脑等），设置适当的样式 */
+@media screen and (min-width: 64em) {
+    .subline {
+        position: absolute;
+        left: 50%;
+        bottom: 1.5%;
+        width: max(300px, 22vw);
+        height: auto;
+        top: auto;
+        display: block;
+    }
+
+    .frame {
+        width: 100%;
+        height: 5vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1.5rem;
+        /* 将此行调整至 display: flex; 下 */
+    }
+
+    .menu {
+        right: 3em;
+    }
+
+}
+
+/* @media only screen and (orientation: portrait) {
+    .containerHakimi {
+        display: none; 
+    }
+    #warning-message {
+        display: block; 
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    .containerHakimi {
+        display: block;
+    }
+
+    #warning-message {
+        display: none; 
+    }
+    
+} */
+
+
+
+.rotate {
+    position: absolute;
+    top: 150;
+    left: 0;
+    width: 100vw; /* Use viewport width to take full width of the screen */
+    height: 100vh; /* Use viewport height to take full height of the screen */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    z-index: 999;
+}
+
+.rotate img {
+    max-width: 80%;
+    max-height: 80%; /* Ensure the image maintains its aspect ratio */
+    margin-top: -22em;
+    width: auto; /* Let the image adjust its width responsively */
+    height: auto; /* Let the image adjust its height responsively */
+}
+#warning-message {
+    display: none;
+}
