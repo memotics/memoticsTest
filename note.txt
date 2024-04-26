@@ -1,0 +1,157 @@
+import React, { Suspense, useRef, useState, useContext} from "react";
+import { GlobalCanvas, SmoothScrollbar } from "@14islands/r3f-scroll-rig";
+import { Environment, Loader } from "@react-three/drei";
+
+import { BodyCopy, Headline, Subtitle } from "./Text";
+import { Image } from "./Image";
+import { ImageCube } from "./ImageCube";
+import { WebGLBackground } from "./WebGLBackground";
+import { Lens } from "./Lens";
+import CodropsFrame from "./CodropsFrame";
+
+import { VideoBallApp } from "./VideoBallEffect";
+import { HeadApp } from "./HeadApp";
+import HakimiApp from "./Hakimi/App"
+import MarqueeBig from "./MarqueeBig"
+import VideoScene from "./VirtualTour/VideoScene"
+import Marquee2 from "./Marquee2"
+import Marquee3 from "./Marquee3"
+import FooterDiv from "./FooterDiv"
+import { StoredData } from "./VirtualTour/Context";
+import VirtualTour from "./VirtualTour/VirtualTour";
+import LivingRoom from "./LivingRoom/LivingRoom";
+
+import "@14islands/r3f-scroll-rig/css";
+
+
+export default function App() {
+  const eventSource = useRef();
+  const [enabled, setEnabled] = useState(true);
+  const { data, setData } = useContext(StoredData);
+  console.log("Data:" + data.RenderSpace);
+
+  return (
+    // We attach events onparent div in order to get events on both canvas and DOM
+    <div ref={eventSource}>
+      <CodropsFrame />
+      <GlobalCanvas
+        // shader errors are hidden by default which speeds up compilation
+        debug={false}
+        // scaleMultiplier is a scroll-rig setting to scale the entire scene
+        scaleMultiplier={0.01}
+        // All other props on the R3F Canvas is supported:
+        eventSource={eventSource}
+        eventPrefix="client"
+        flat // disable toneMapping since we have editorial images
+        camera={{ fov: 14 }}
+        style={{ pointerEvents: "none", zIndex: -1 }}
+      >
+        {(globalChildren) => (
+          <Lens>
+            <WebGLBackground />
+            <Suspense fallback="">
+
+              <Environment files="env/empty_warehouse_01_1k.hdr" />
+              {globalChildren}
+            </Suspense>
+          </Lens>
+        )}
+      </GlobalCanvas>
+      <SmoothScrollbar
+        enabled={enabled}
+        config={{ syncTouch: true }}
+      />
+      <article>
+        <div className="imgWrapper">
+          {/* <Image
+            src="images/memoLanding2.jpeg"
+            className="landingImage"
+          /> */}
+          <div className="headerLayout"> 
+            <h2>
+              <Headline wobble>
+              Our Virtual {enabled ? "Architects Are " : "HTML"}Hard at Work
+              </Headline>
+            </h2>
+           
+          </div>
+          </div>
+        <header className="container">
+          {/* <div className="headerLayout"> 
+            <h2>
+              <Headline wobble>
+              Our Virtual {enabled ? "Architects Are " : "HTML"}Hard at Work
+              </Headline>
+            </h2>
+           
+          </div> */}
+        </header>
+      
+        <div className="blankContainer">
+        
+        <VideoBallApp className="videoBallEffect" />
+        <div className="love"> love by Six N. Five</div>
+       </div>
+       <MarqueeBig />
+    
+        {/* <section className="container headapp">
+        <div className="phyText">
+            <Headline>for a Web Revolution in Progress</Headline>
+          </div>
+          </section> */}
+      <div className="headAppContainer">
+     <HeadApp />
+     </div>
+        <section>
+      
+        <Marquee2 />
+    
+        <div className="imagecubetext">
+          </div>
+          <ImageCube
+            src="images/rabbit.jpg"
+            className="JellyPlaceholder"
+          />
+        
+        </section>
+        <Marquee3 />
+        <div className="containerHakimi">    
+          <div className="drag">
+            <img src="images/drag.png" alt="" />
+          </div> 
+          {data.RenderSpace=="CloudSpace" && <HakimiApp />}
+          {data.RenderSpace=="VirtualTour" && <VirtualTour />}
+          {data.RenderSpace=="LivingRoom" && <LivingRoom />}
+        </div>
+
+
+        {/* <section className="container">
+        <div className="imagecubetext Stream">
+            <Headline>Streaming Soon for Our Homies</Headline>
+          </div>
+          <h3 className="lastText">
+              <Subtitle>
+              Different by Design. Build for Creatives.
+              </Subtitle>
+          </h3>
+        </section>
+        <footer>
+          <FooterDiv/>
+        </footer> */}
+
+
+      </article>
+
+      <Loader
+        containerStyles={{
+          background: "transparent",
+          top: "auto",
+          bottom: 0,
+          height: "5px",
+        }}
+        innerStyles={{ background: "ff4d4d", width: "100vw", height: "5px" }}
+        barStyles={{ background: "white", height: "100%" }}
+      />
+    </div>
+  );
+}
